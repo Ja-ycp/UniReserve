@@ -1,0 +1,24 @@
+import { Router } from 'express';
+import authRoutes from './authRoutes.js';
+import userRoutes from './userRoutes.js';
+import libraryRoutes from './libraryRoutes.js';
+import resourceRoutes from './resourceRoutes.js';
+import genreRoutes from './genreRoutes.js';
+import reservationRoutes from './reservationRoutes.js';
+import fineRoutes from './fineRoutes.js';
+import notificationRoutes from './notificationRoutes.js';
+import policyRoutes from './policyRoutes.js';
+import analyticsRoutes from './analyticsRoutes.js';
+
+const router = Router();
+router.use('/auth', authRoutes);
+router.use('/users', userRoutes);
+router.use('/libraries', libraryRoutes);
+router.use('/resources', resourceRoutes);
+router.use('/genres', genreRoutes);
+router.use('/reservations', reservationRoutes);
+router.use('/fines', fineRoutes);
+router.use('/notifications', notificationRoutes);
+router.use('/policies', policyRoutes);
+router.use('/analytics', analyticsRoutes);
+export default router;
